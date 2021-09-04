@@ -1,3 +1,16 @@
 h1 {
     color: blueviolet;
 }
+
+body {
+    background-color: slategrey;
+}
+
+table {
+    background-color: steelblue;
+    border: black solid;
+}
+
+td {
+    border: white solid;
+}
