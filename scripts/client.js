@@ -2,11 +2,16 @@ $ ( document ).ready( onReady );
 
 function onReady(){
     $( '#submitButton' ).on( 'click', submitEmployee );
-    $()
+    $(`#employeeTable`).on(`click`, `#delete`, deleteEmployee);
 } // end onReady
 
 let employees = [];
 let salarySum = 0;
+
+function deleteEmployee(){
+    console.log(`delete button pressed`)
+    $(this).parent().parent().remove()
+}
 
 function submitEmployee(){
     let employee = {
