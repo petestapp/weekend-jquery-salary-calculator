@@ -2,9 +2,11 @@ $ ( document ).ready( onReady );
 
 function onReady(){
     $( '#submitButton' ).on( 'click', submitEmployee );
+    $()
 } // end onReady
 
-let employees = []
+let employees = [];
+let salarySum = 0;
 
 function submitEmployee(){
     let employee = {
@@ -25,5 +27,8 @@ function submitEmployee(){
             <td id="deleteButtonTable"><button id="delete">Delete</button></td>
         </tr>`
     )
+    salarySum += ((employee.salary)/12);
+    $(`#salarySum`).empty().append(`Salary Sum: ` + salarySum.toFixed(2));
 } // end submitEmployee
+
 
