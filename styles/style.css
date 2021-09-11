@@ -14,3 +14,7 @@ table {
 td {
     border: white solid;
 }
+
+.red {
+    background-color: red;
+}

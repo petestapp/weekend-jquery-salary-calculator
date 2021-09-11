@@ -9,8 +9,7 @@ let employees = [];
 let salarySum = 0;
 
 function deleteEmployee(){
-    console.log(`delete button pressed`)
-    $(this).parent().parent().remove()
+    $(this).parent().parent().remove();
 }
 
 function submitEmployee(){
@@ -34,6 +33,15 @@ function submitEmployee(){
     )
     salarySum += ((employee.salary)/12);
     $(`#salarySum`).empty().append(`Salary Sum: ` + salarySum.toFixed(2));
+    checkSalary();
 } // end submitEmployee
+
+function checkSalary(){
+    if (salarySum < 20000){
+    }
+    else {
+        $(`#salarySum`).addClass("red")
+    }
+}
 
 
