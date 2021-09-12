@@ -12,16 +12,19 @@
     <script src="scripts/client.js"></script>
     <title>jQuery Salary Calculator</title>
 </head>
+
 <body>
     <h1>jQuery Salary Calculator</h1>
-    <p>
-        <input type="text" name="firstName" id="firstNameIn" placeholder="First Name">
-        <input type="text" name="lastName" id="lastNameIn" placeholder="Last Name">
-        <input type="text" name="idNumber" id="idNumberIn" placeholder="ID">
-        <input type="text" name="title" id="titleIn" placeholder="Title">
-        <input type="text" name="salary" id="salaryIn" placeholder="Annual Salary">
+    <h4>Add Employee:</h4>
+    <div id="tableAndTotalMonthly"></div>
+    <div>
+        <input type="text" class="inputs" name="firstName" id="firstNameIn" placeholder="First Name">
+        <input type="text" class="inputs" name="lastName" id="lastNameIn" placeholder="Last Name">
+        <input type="text" class="inputs" name="idNumber" id="idNumberIn" placeholder="ID">
+        <input type="text" class="inputs" name="title" id="titleIn" placeholder="Title">
+        <input type="text" class="inputs" name="salary" id="salaryIn" placeholder="Annual Salary">
         <button id="submitButton">Submit</button>
-    </p>
+    </div>
     <table id="employeeTable">
         <thead>
             <tr>
@@ -33,8 +36,10 @@
                <th></th>
             </tr>
         </thead>
-        <tbody id="rows"></tbody>
+        <tbody></tbody>
     </table>
-    <p id="salarySum"></p>
+    <div id="salarySum">Total Monthly: $ 0.00</div>
+    </div>
 </body>
+
 </html>

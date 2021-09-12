@@ -1,33 +1,43 @@
-/* 
-Lava            #C31D28
-Gunmetal        #272F3F
-Light Cyan      #E5FCF5
-Green RYB       #76B041
-Sap Green       #3F612D */
-
-h1 {
-    color: #272F3F;
-}
-
 body {
+    color: #272F3F;
     background-color: #527E3A;
     font-family: 'Comfortaa', cursive;
 }
 
-table {
+h1 {
+    color: #272F3F;
+    text-decoration: underline;
+}
+
+h4 {
+    margin-bottom: 5px;
+}
+
+table{
+    background-color: #3D3D3D;
+    width: 900px;
+    table-layout: fixed;
+}
+
+table, #salarySum {
     border: solid #272F3F;
-    width: 600px;
     border-radius: 10px;
+    padding: 5px;
+    margin-top: 15px;
 }
 
 thead {
     background-color: #3DA5D9;
 }
 
-td {
+td, #salarySum {
     background-color: #E5FCF5;
 }
 
+#salarySum {
+    display: inline-block;
+}
+
 .red {
-    background-color: #C31D28;
+    background-color: #C31D28 !important;
 }
