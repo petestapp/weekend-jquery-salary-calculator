@@ -1,20 +1,33 @@
+/* 
+Lava            #C31D28
+Gunmetal        #272F3F
+Light Cyan      #E5FCF5
+Green RYB       #76B041
+Sap Green       #3F612D */
+
 h1 {
-    color: blueviolet;
+    color: #272F3F;
 }
 
 body {
-    background-color: slategrey;
+    background-color: #527E3A;
+    font-family: 'Comfortaa', cursive;
 }
 
 table {
-    background-color: steelblue;
-    border: black solid;
+    border: solid #272F3F;
+    width: 600px;
+    border-radius: 10px;
+}
+
+thead {
+    background-color: #3DA5D9;
 }
 
 td {
-    border: white solid;
+    background-color: #E5FCF5;
 }
 
 .red {
-    background-color: red;
+    background-color: #C31D28;
 }

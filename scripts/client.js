@@ -9,7 +9,13 @@ let employees = [];
 let salarySum = 0;
 
 function deleteEmployee(){
+    let rawData = $(this).parent().parent().children(4).text();
+    let yearSalaryToSubtract = 0;
+    yearSalaryToSubtract = parseInt(rawData.slice(2, rawData.length-6));
+    monthSalaryToSubtract = yearSalaryToSubtract/12;
+    salarySum -= monthSalaryToSubtract;
     $(this).parent().parent().remove();
+    $(`#salarySum`).empty().append(`Salary Sum: $ ` + salarySum.toFixed(2));
 }
 
 function submitEmployee(){
@@ -18,7 +24,7 @@ function submitEmployee(){
         lastName: $('#lastNameIn').val(),
         idNumber: $('#idNumberIn').val(),
         title: $('#titleIn').val(),
-        salary: $('#salaryIn').val()
+        salary: $('#salaryIn').val(),
     }
     employees.push(employee);
     $(`#employeeTable`).append(
@@ -27,12 +33,12 @@ function submitEmployee(){
             <td id="lastNameTable">${employee.lastName}</td>
             <td id="idTable">${employee.idNumber}</td>
             <td id="titleTable">${employee.title}</td>
-            <td id="salaryTable">${employee.salary}</td>
+            <td id="salaryTable">$ ${employee.salary}</td>
             <td id="deleteButtonTable"><button id="delete">Delete</button></td>
         </tr>`
     )
     salarySum += ((employee.salary)/12);
-    $(`#salarySum`).empty().append(`Salary Sum: ` + salarySum.toFixed(2));
+    $(`#salarySum`).empty().append(`Salary Sum: $ ` + salarySum.toFixed(2));
     checkSalary();
 } // end submitEmployee
 
@@ -43,5 +49,3 @@ function checkSalary(){
         $(`#salarySum`).addClass("red")
     }
 }
-
-
